@@ -1,0 +1,316 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    color: #212121;
+    font-family: "Liberation Sans", Arial, Helvetica, sans-serif
+}
+
+/* Code pour intégrer la police */
+
+@font-face {
+    font-family: "Liberation Sans";
+    src: url(../fonts/liberationsans-regular-webfont-webfont.woff) format("woff");
+}
+
+body{
+    background-color: #1C1C1C;
+}
+
+/* Partie de code pour header */
+
+header{
+    background-image: url(../IMG/background.jpg);
+}
+
+header>.larg70>div:first-of-type{
+    text-align: center;
+    padding-top: 40px;
+}
+
+h1{
+    font-weight: normal;
+    font-size: 23px;
+    margin-top: 30px;
+}
+
+h1 span, figcaption, article>div p:last-of-type{
+    color: #EA9F06;
+}
+
+nav>a{
+    text-decoration: none;
+}
+
+header>.larg70>div:last-of-type{
+    width: 90%;
+    margin: auto;
+    padding: 30px 0px;
+}
+
+header>.larg70>div:last-of-type>p{
+    font-size: 20px;
+}
+
+header>.larg70>div:last-of-type>nav{
+    display: flex;
+    justify-content: space-between;
+    font-size: 15px;
+    margin-top: 25px;
+}
+
+/* Partie de code pour main */
+
+#combat{
+    display: none;
+}
+
+main{
+    width: 95%;
+    margin: 25px auto 0px auto;
+    background-color: #F3F3F3;
+    position: relative;
+}
+
+#boxeurs{
+    height: 250px;
+    background-image: url(../IMG/header-page-catalogue.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 30px;
+}
+
+article{
+    width: 60%;
+    margin: auto;
+}
+
+article img{
+    width: 100%;
+    margin-bottom: -10px;
+}
+
+figure{
+    position: relative;
+}
+
+figcaption, article>div p{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+figcaption{
+    position: absolute;
+    font-size: 25px;
+    padding: 5px 10px;
+    border-radius: 10px;
+    background-color:#292929;
+    top: 0;
+    right: 0;
+    transform: matrix(1,0,0,1,40,10);
+}
+
+h2{
+    position: relative;
+    bottom: 25px;
+    text-transform: uppercase;
+    font-size: 10px;
+    text-align: center;
+    padding: 10px;
+    font-weight: bold;
+}
+
+article div{
+    display: flex;
+    justify-content: space-around;
+    padding: 20px 0px 50px 0px;
+}
+
+input{
+    background: linear-gradient(#363636,#9A9A9A);
+    width: 50%;
+    color: #fff;
+    padding: 3px;
+    border: none;
+    font-size: 12px;
+}
+
+article>div>p{
+    font-size: 20px;
+}
+
+article>div>p:first-of-type{
+    text-decoration: line-through;
+}
+
+article:last-of-type{
+    padding-bottom: 150px;
+}
+
+main nav{
+    position: absolute;
+    display: flex;
+    width: 80%;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    justify-content: space-evenly;
+    font-size: 10px;
+    transform: matrix(1,0,0,1,0,25);
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+i{
+    color: #D1D1D1;
+}
+
+/* Partie de code du footer */
+
+footer{
+    background-color: #373737 ;
+}
+
+footer>.larg70{
+    padding: 50px 20px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    text-align: center;
+    gap: 20px;
+}
+
+footer>.larg70>div p{
+    color: #fff;
+    font-size: 15px;
+    margin: 20px 0px;
+}
+
+#reseaux{
+    grid-area: 4/1/4/3;
+    display: flex;
+    border-top:#818181 3px solid;
+    padding: 30px 0px;
+    justify-content: space-evenly;
+}
+
+footer>.larg70>p:last-of-type{
+    grid-area: 5/1/5/3;
+    color: #fff;
+}
+
+/* Mode ordinateur */
+
+@media screen and (min-width:576px) {
+
+    .larg70{
+        width: 70%;
+        margin: auto;
+    }
+
+    header>.larg70{
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 20px;
+    }
+    
+    header>.larg70>div:first-of-type{
+        width: 50%;
+        text-align: left;
+        align-self: stretch;
+    }
+
+    header img{
+        width: 100%;
+        max-width: 300px;
+    }
+
+    header>.larg70>div:last-of-type{
+        width: 50%;
+        text-align: right;
+        align-self: stretch;
+        padding: 40px 0px 0px 0px;
+    }
+
+    header>.larg70>div:last-of-type>nav{
+        margin-top: 85px;
+        min-width: 250px;
+    }
+    
+    header>.larg70>div>nav>a{
+        font-size: 14px;
+    }
+
+    /* Partie de code du main  */
+
+    #boxeurs{
+        display: none;
+    }
+
+    #combat{
+        display: block;
+        width: 100%;
+        grid-area: 1/1/1/3;
+        padding-top: 30px;
+        background-color: #1C1C1C;
+    }
+
+    main{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 20px;
+        padding-bottom: 150px;
+    }
+
+    article{
+        width: 70%;
+    }
+
+    article:last-of-type{
+        padding-bottom: 0px;
+    }
+
+    main nav{
+        width: 400px;
+        font-size: 14px;
+        bottom: -50px;
+    }
+
+    /* Partie de code pour footer  */
+
+    footer>.larg70{
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+
+    footer>.larg70>div p{
+        font-size: 12px;
+    }
+
+    #reseaux{
+        grid-area: 2/1/2/5;
+    }
+    
+    footer>.larg70>p:last-of-type{
+        grid-area: 3/1/3/5;
+        color: #fff;
+    }
+    
+    /* Partie hover / survoler l'élément */
+
+    a:hover{
+        color: #EA9F06;
+        transition: 0.5s;
+    }
+
+    #reseaux>a>img:hover{
+        opacity: 0.5;
+        transition: 0.5s;
+    }
+
+    input:hover{
+        background: #EA9F06;
+        color: #1C1C1C;
+        transition: 0.5s;
+    }
+}
